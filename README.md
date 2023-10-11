@@ -1,3 +1,7 @@
+<img width="719" alt="image" src="https://github.com/rizkidarmawan21/first-laravel-livewire/assets/80609220/5b200d9a-c43f-4412-b558-699f048c9e19">
+
+<br/>
+<br/>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

@@ -24,6 +24,8 @@ class FormRegister extends Component
 
     private $cabangService;
 
+    public $isAlertError = false;
+
     protected function rules()
     {
         return [
@@ -33,6 +35,24 @@ class FormRegister extends Component
             'jenis_kelamin' => 'required|in:Laki-laki,Perempuan',
             'cabang_id' => 'required|exists:cabangs,id',
             'program_id' => 'required|exists:programs,id',
+        ];
+    }
+
+    protected function messages()
+    {
+        return [
+            'namaSantri.required' => 'Nama santri tidak boleh kosong',
+            'username.required' => 'Username tidak boleh kosong',
+            'username.unique' => 'Username sudah digunakan',
+            'password.required' => 'Password tidak boleh kosong',
+            'password.min' => 'Password minimal 6 karakter',
+            'jenis_kelamin.required' => 'Jenis kelamin tidak boleh kosong',
+            'jenis_kelamin.in' => 'Jenis kelamin tidak valid',
+            'cabang_id.required' => 'Cabang tidak boleh kosong',
+            'cabang_id.exists' => 'Cabang tidak valid',
+            'program_id.required' => 'Program tidak boleh kosong',
+            'program_id.exists' => 'Program tidak valid',
+
         ];
     }
 

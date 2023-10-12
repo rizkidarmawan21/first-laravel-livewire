@@ -1,7 +1,16 @@
 <div>
     {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
+
+    {{-- alert error --}}
+    @error('username')
+        <x-alerts.danger message="{{ $message }}" />
+    @enderror
+
     <form wire:submit.prevent="save">
 
+        <x-inputs.label>
+            Nama Santri
+        </x-inputs.label>
         <x-inputs.text-group>
             <x-inputs.text placeholder="Masukkan nama santri" wire:model.live="namaSantri" />
             <x-slot name="icon">
@@ -15,9 +24,10 @@
             @endslot
 
         </x-inputs.text-group>
-
-        {{ $namaSantri }}
         <div class="my-2" />
+        <x-inputs.label>
+            Username
+        </x-inputs.label>
         <x-inputs.text-group>
             <x-inputs.text placeholder="Masukkan nomor telepon" type="number" name="username"
                 wire:model.live="username" />
@@ -32,7 +42,10 @@
                 @enderror
             @endslot
         </x-inputs.text-group>
-
+        <div class="my-2" />
+        <x-inputs.label>
+            Password
+        </x-inputs.label>
         <x-inputs.text-group>
             <x-inputs.text placeholder="Masukkan password" wire:model.live="password" type="password" />
             <x-slot name="icon">
@@ -88,6 +101,9 @@
                 Program
             </x-inputs.label>
             <x-inputs.dropdown wire:model.live="program_id">
+                <x-inputs.options value="">
+                    -- Pilih Program --
+                </x-inputs.options>
                 @foreach ($programOptions as $key => $program)
                     <x-inputs.options value="{{ $key }}">
                         {{ $program }}

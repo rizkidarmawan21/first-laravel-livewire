@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>Form Pendaftaran Santri</title>
 
     <!-- Google Font: Source Sans Pro -->
@@ -18,6 +20,9 @@
 </head>
 
 <body class="hold-transition register-page">
+
+
+
     <div class="register-box">
         <div class="card card-outline card-primary">
             <div class="card-header text-center">

@@ -28,7 +28,7 @@ class FormRegister extends Component
     {
         return [
             'namaSantri' => 'required|string',
-            'username' => 'required|max:13',
+            'username' => 'required|max:13|unique:users,username',
             'password' => 'required|min:6',
             'jenis_kelamin' => 'required|in:Laki-laki,Perempuan',
             'cabang_id' => 'required|exists:cabangs,id',
